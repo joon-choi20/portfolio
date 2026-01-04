@@ -1,19 +1,22 @@
-/* Reset & Base */
+/* =========================================================
+   Base / Reset
+========================================================= */
 body {
   margin: 0;
-  font-family: 'pretendard';
+  font-family: 'Pretendard', sans-serif;
   background: #fff;
   color: #111;
 }
 
-/* Header with Navigation */
+
+/* =========================================================
+   Header / Navigation (Main Page)
+========================================================= */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 35px;
-  margin-left: 35px;
-  margin-right: 35px;
+  margin: 35px;
   padding: 5px;
 }
 
@@ -21,7 +24,6 @@ body {
   font-size: 18px;
   font-weight: 800;
   margin: 0;
-  margin-bottom: 2px;
 }
 
 .nav a {
@@ -36,6 +38,10 @@ body {
   color: #9e9e9e;
 }
 
+
+/* =========================================================
+   Main Page Header
+========================================================= */
 .header {
   padding: 0 40px 5px;
 }
@@ -48,7 +54,10 @@ body {
   margin-bottom: 40px;
 }
 
-/* Project Grid */
+
+/* =========================================================
+   Project Grid (Main Page)
+========================================================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -79,6 +88,7 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Overlay Text */
 .overlay-text {
   position: absolute;
   bottom: 0;
@@ -91,8 +101,8 @@ body {
 
 .overlay-text h2 {
   font-size: 14px;
-  margin: 0 0 4px 0;
   font-weight: 600;
+  margin: 0 0 4px 0;
 }
 
 .overlay-text p {
@@ -101,6 +111,7 @@ body {
   color: #555;
 }
 
+/* Hover Effect (Desktop) */
 .card:hover img {
   transform: scale(1.03);
   opacity: 0.85;
@@ -111,7 +122,10 @@ body {
   transform: translateY(-4px);
 }
 
-/* Footer */
+
+/* =========================================================
+   Footer
+========================================================= */
 .site-footer {
   text-align: center;
   padding: 40px 0 20px;
@@ -119,30 +133,10 @@ body {
   color: #999;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px 80px;
-  }
-  .header {
-    padding: 20px;
-  }
-}
-/* Reset & Base */
-body {
-  margin: 0;
-  font-family: 'Pretendard', sans-serif;
-  background: #fff;
-  color: #111;
-}
 
-/* About Page Styles */
+/* =========================================================
+   About Page
+========================================================= */
 body.about-page {
   padding: 60px 60px;
 }
@@ -150,17 +144,16 @@ body.about-page {
 .about-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   max-width: 1200px;
-  margin: 0 left;
-  align-items: left;
+  margin: 0 auto;
+  align-items: flex-start;
 }
 
 .about-left {
   flex: 1;
   min-width: 260px;
   max-width: 400px;
-  text-align: left;
 }
 
 .about-photo {
@@ -212,13 +205,59 @@ body.about-page {
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 800px) {
+
+/* =========================================================
+   Responsive – Tablet & Mobile
+========================================================= */
+@media (max-width: 768px) {
+  /* Header */
+  .site-header {
+    margin: 20px;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Main Header */
+  .header {
+    padding: 0 20px;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
+  }
+
+  /* Grid */
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px 80px;
+    gap: 24px;
+  }
+
+  /* Card UX (No Hover on Mobile) */
+  .overlay-text {
+    opacity: 1;
+    position: static;
+    padding: 10px 0 0;
+    transform: none;
+  }
+
+  .card:hover img {
+    transform: none;
+    opacity: 1;
+  }
+
+  /* About Page */
+  body.about-page {
+    padding: 30px 20px;
+  }
+
   .about-container {
     flex-direction: column;
-    padding: 20px;
     gap: 40px;
   }
+
   .about-photo {
     max-width: 100%;
   }
