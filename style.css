@@ -261,4 +261,60 @@ body.about-page {
   .about-photo {
     max-width: 100%;
   }
+/* =========================
+   Mobile Alignment Fix
+   iPhone 12 Pro 기준
+   ========================= */
+
+@media screen and (max-width: 430px) {
+
+  /* 전체 헤더 / 메인 래퍼 기준선 통일 */
+  header,
+  .header,
+  .main,
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Junseo Choi */
+  .site-title,
+  .name,
+  h1 {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  /* about / contact 메뉴 */
+  .nav,
+  .menu,
+  .navigation {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .nav a,
+  .menu a {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  /* 특히 about만 밀려 보일 때 강제 보정 */
+  .nav a:first-child,
+  .menu a:first-child {
+    margin-left: 0 !important;
+  }
+
+  /* Based in Seoul, South Korea */
+  .location,
+  .based-on,
+  .subtitle {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+}
+
 }
