@@ -316,6 +316,70 @@ body.about-page {
     text-align: left;
   }
 }
+/* =========================
+   Contact Page
+   ========================= */
+
+body.contact-page {
+  padding: 60px;
+}
+
+.contact-container {
+  max-width: 720px;
+}
+
+.contact-intro {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contact-mail {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.contact-mail:hover {
+  opacity: 0.6;
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-links a {
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  color: #111;
+}
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+  body.contact-page {
+    padding: 40px 20px;
+  }
+
+  .contact-mail {
+    font-size: 18px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 
 
 }
